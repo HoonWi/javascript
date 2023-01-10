@@ -5,6 +5,13 @@ $(function () {
         $added = 0 // 버튼 클릭돼서 추가된 로드 갯수. 전체 데이터 수와 일치하면 버튼 사라지게
         $allData = [];
 
+        $container.masonry({
+            // options
+            itemSelector: '.gallery-item',
+            columnWidth: 270,
+            gutter:20
+        });
+
     //$.getJSON('파일경로', 할일); JSON 불러오는 방법
     $.getJSON('./data/content.json', initGallery);
 
